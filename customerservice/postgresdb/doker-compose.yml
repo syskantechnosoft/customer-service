@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: my_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf   # Mount the custom configuration file
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql     # Mount the init script
+      - postgres_data:/var/lib/postgresql/data              # Persistent data storage
+    ports:
+      - "5432:5432"
+    command: postgres -c 'config_file=/etc/postgresql/postgresql.conf'
+
+volumes:
+  postgres_data:

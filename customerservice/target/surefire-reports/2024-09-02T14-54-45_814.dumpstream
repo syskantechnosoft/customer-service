@@ -1,0 +1,5 @@
+# Created at 2024-09-02T14:54:45.979
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Trainings\2024\Verizon\VSCodeWS\customerservice\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
